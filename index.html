@@ -4,18 +4,78 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <title>Document</title>
 </head>
 <body>
   
   <div class="container">
-    <h2 class="title text-center">Pizza buyurtma qilish</h2>
-     
+    <div class="mb-5">
+      <h2 class="title text-center">Pizza buyurtma qilish</h2>
+    </div>
+    <div class="container__inner-box row">
+      
+      <div class="col-8">
+        <form class="form">
+          <!-- bread selection process -->
+          <div class="bread-form w-50 mb-5">
+            <label class="d-flex flex-column fw-bold" for="bread">
+              Noni qanday bolsin?
+
+              <select class="select-1 w-25 mt-2" name="option" id="bread">
+                <option selectd hidden></option>
+                <option value="yupqa">yupqa</option>
+                <option value="orta">o'rta</option>
+                <option value="qalin">qalin</option>
+              </select>
+            </label>
+          </div>
+
+          <!-- the process of choosing the size of the loaf -->
+
+          <div class="size-form fw-bold d-block mb-5">
+            <h3>
+              Kattaligi
+            </h3>           
+            <div>
+              <label class=" volume-name1 size-label mx-2">
+                <input class="input-radio-1 visually-hidden" name="size" type="radio">
+                <span class="d-block border border-red rounded-pill border-2 p-4 px-3">25 cm</span>
+              </label>
+  
+              <label class="volume-name2 mx-2">
+                <input class="input-radio-2 visually-hidden" name="size"  type="radio">
+                <span class="d-block border border-red rounded-pill border-2 p-4 px-3">30 cm</span>
+              </label>
+  
+              <label class="volume-name3 mx-2">
+                <input class="input-radio-3 visually-hidden" name="size" type="radio">
+                <span class="d-block border border-red rounded-pill border-2 p-4 px-3">35 cm</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- what should we put on it? -->
+
+         <div class="ingredients">
+          <h3>Ustiga nima solaylik?</h3>
+         </div>
+        </form>
+      </div>
+      
+      <div class="col-1 border-5 border-end border-dark"></div>
+
+      <div class="col-3">
+        <!-- bread selection process -->
+        <p class="fw-bold">Non: <span class="selected fw-normal"></span></p>
+
+        <!-- the process of choosing the size of the loaf -->
+        <p class="fw-bold">Kattaligi: <span class="selected-size fw-normal"></span></p>
+      </div>
+    </div>
   </div>
-
-
+  
+  
   <script src="./js/script.js"></script>
 </body>
 </html>
