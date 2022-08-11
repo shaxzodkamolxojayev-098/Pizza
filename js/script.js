@@ -56,13 +56,31 @@ let chackboxes = document.querySelectorAll('.checkbox-should');
 let ListArry = [];
 
 for(let checkboxShould of chackboxes) {
-  checkboxShould.addEventListener('click',function(evt) {
+  checkboxShould.addEventListener('click',function() {
     if(this.checked == true) {
       ListArry.push(this.value);
       valueList.innerHTML = ListArry;
     } else {
       ListArry = ListArry.filter(e => e !== this.value);
       valueList.innerHTML = ListArry
+    }
+  })
+}
+
+
+let additionalList = document.querySelector('.Additional-list');
+let supplementItem = document.querySelectorAll('.supplement');
+
+let supplementArry = [];
+
+for(var extrasItem of supplementItem) {
+  extrasItem.addEventListener('click',function() {
+    if(this.checked == true) {
+      supplementArry.push(this.value);
+      additionalList.innerHTML = supplementArry;
+    } else {
+      supplementArry = supplementArry.filter(e => e !== this.value);
+      additionalList.innerHTML = supplementArry
     }
   })
 }

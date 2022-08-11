@@ -16,14 +16,14 @@
     <div class="container__inner-box row">
       
       <div class="col-8">
-        <form class="form">
+        <form class="form" id="push" action="https://echo.htmlacademy.ru/" method="POST">
           <!------------------------------ bread selection process // non tanlash jarayoni -->
           <div class="bread-form w-50 mb-5">
             <label class="d-flex flex-column fw-bold" for="bread">
               Noni qanday bolsin?
 
-              <select class="select-1 w-25 mt-2" name="option" id="bread">
-                <!-- <option hidden></option> -->
+              <select class="select-1 w-25 mt-2 w-50" name="option" id="bread">
+                <option selected hidden>non turini tanlang</option>
                 <option value="yupqa">yupqa</option>
                 <option value="orta">o'rta</option>
                 <option value="qalin">qalin</option>
@@ -102,12 +102,17 @@
             <h3>Qo'shimchalar</h3>
            </div>
 
-           <label class="d-flex">
-            <input class="" type="checkbox"> 
-            <span>Achchiq</span>
-            <input type="checkbox">
-            <span>Sasiskali</span>
-           </label>
+           <div class="d-flex">
+            <label>
+              <input class="supplement" type="checkbox" value="achchiq"> 
+              <span>Achchiq</span>
+             </label>
+  
+             <label>
+              <input class="supplement" type="checkbox" value="sasiskali">
+              <span>Sasiskali</span>
+             </label>
+           </div>
         </form>
       </div>
       
@@ -121,10 +126,12 @@
         <p class="fw-bold">Kattaligi: <span class="selected-size fw-normal"></span></p>
 
         <!----------------- what should we put on it? // unga nima qo'yishimiz kerak? -->
-        <p class="fw-bold" d-block >Ustida: <span class="selected-list d-block fw-normal"></span></p>
+        <p class="fw-bold">Ustida: <span class="selected-list d-block fw-normal"></span></p>
 
         <!----------------- Add extras  //  qo'shimchalar qoshish -->
         <p class="mt-5 fw-bold">Qo'shimcha: <span class="Additional-list fw-normal"></span></p>
+
+        <button form="push" class="px-4 py-20 border border-r" type="submit">jonatish</button>
       </div>
     </div>
   </div>
