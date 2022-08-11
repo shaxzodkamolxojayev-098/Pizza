@@ -17,13 +17,13 @@
       
       <div class="col-8">
         <form class="form">
-          <!-- bread selection process -->
+          <!------------------------------ bread selection process // non tanlash jarayoni -->
           <div class="bread-form w-50 mb-5">
             <label class="d-flex flex-column fw-bold" for="bread">
               Noni qanday bolsin?
 
               <select class="select-1 w-25 mt-2" name="option" id="bread">
-                <option selectd hidden></option>
+                <!-- <option hidden></option> -->
                 <option value="yupqa">yupqa</option>
                 <option value="orta">o'rta</option>
                 <option value="qalin">qalin</option>
@@ -31,46 +31,100 @@
             </label>
           </div>
 
-          <!-- the process of choosing the size of the loaf -->
+          <!-- -----the process of choosing the size of the loaf // nonning o'lchamini tanlash jarayoni -->
 
           <div class="size-form fw-bold d-block mb-5">
             <h3>
               Kattaligi
             </h3>           
             <div>
-              <label class=" volume-name1 size-label mx-2">
+              <label class="size-label mx-2">
                 <input class="input-radio-1 visually-hidden" name="size" type="radio">
                 <span class="d-block border border-red rounded-pill border-2 p-4 px-3">25 cm</span>
               </label>
   
-              <label class="volume-name2 mx-2">
+              <label class="mx-2">
                 <input class="input-radio-2 visually-hidden" name="size"  type="radio">
                 <span class="d-block border border-red rounded-pill border-2 p-4 px-3">30 cm</span>
               </label>
   
-              <label class="volume-name3 mx-2">
+              <label class="mx-2">
                 <input class="input-radio-3 visually-hidden" name="size" type="radio">
                 <span class="d-block border border-red rounded-pill border-2 p-4 px-3">35 cm</span>
               </label>
             </div>
           </div>
 
-          <!-- what should we put on it? -->
+          <!--------------------- what should we put on it? // unga nima qo'yishimiz kerak? -->
 
          <div class="ingredients">
           <h3>Ustiga nima solaylik?</h3>
          </div>
+
+          <div class="d-flex row mb-5">
+            <div class="d-flex flex-column col-3">
+              <label class="mb-1">
+                <input class="checkbox-should" value="Pomidor" type="checkbox"> 
+                <span>Pomidor</span>
+              </label>
+
+              <label class="">
+                <input class="checkbox-should mb-2" value="Kurka go'shti" type="checkbox"> 
+                <span>Kurka go'shti</span>
+              </label>
+
+              <label class="">
+              <input class="checkbox-should mb-2" value="Zaytun" type="checkbox"> 
+              <span>Zaytun</span>
+              </label>
+            </div>
+
+            <div class="d-flex flex-column col-3">
+              <label class="">
+              <input class="checkbox-should mb-2" value="Tuzlangan bodring" type="checkbox"> 
+              <span>Tuzlangan bodring</span>
+              </label>
+
+              <label class="">
+              <input class="checkbox-should mb-2" value="Qo'ziqorin" type="checkbox"> 
+              <span>Qo'ziqorin</span>
+              </label>
+
+              <label class="">
+              <input class="checkbox-should mb-2" value="Qazi" type="checkbox"> 
+              <span>Qazi</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- ---------------- Add extras  //  qo'shimchalar qoshish -->
+          <div class="Supplements">
+            <h3>Qo'shimchalar</h3>
+           </div>
+
+           <label class="d-flex">
+            <input class="" type="checkbox"> 
+            <span>Achchiq</span>
+            <input type="checkbox">
+            <span>Sasiskali</span>
+           </label>
         </form>
       </div>
       
       <div class="col-1 border-5 border-end border-dark"></div>
 
       <div class="col-3">
-        <!-- bread selection process -->
+        <!-- ---------------------bread selection process  //  non tanlash jarayoni -->
         <p class="fw-bold">Non: <span class="selected fw-normal"></span></p>
 
-        <!-- the process of choosing the size of the loaf -->
+        <!-- ------------the process of choosing the size of the loaf // nonning o'lchamini tanlash jarayoni -->
         <p class="fw-bold">Kattaligi: <span class="selected-size fw-normal"></span></p>
+
+        <!----------------- what should we put on it? // unga nima qo'yishimiz kerak? -->
+        <p class="fw-bold" d-block >Ustida: <span class="selected-list d-block fw-normal"></span></p>
+
+        <!----------------- Add extras  //  qo'shimchalar qoshish -->
+        <p class="mt-5 fw-bold">Qo'shimcha: <span class="Additional-list fw-normal"></span></p>
       </div>
     </div>
   </div>

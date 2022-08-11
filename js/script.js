@@ -16,7 +16,7 @@ elSelect.addEventListener('click', function(evt){
 })
 
 
-// breadSize
+//------------------ breadSize
 
 let elInput1 = document.querySelector('.input-radio-1');
 let elInput2 = document.querySelector('.input-radio-2');
@@ -46,3 +46,24 @@ elInput3.addEventListener('click', function(evt){
     elSelectedSize.textContent = '35 cm';
   }
 })
+
+
+
+// <!--------------------- what should we put on it? // unga nima qo'yishimiz kerak? -->
+let valueList = document.querySelector('.selected-list');
+let chackboxes = document.querySelectorAll('.checkbox-should');
+
+let ListArry = [];
+
+for(let checkboxShould of chackboxes) {
+  checkboxShould.addEventListener('click',function(evt) {
+    if(this.checked == true) {
+      ListArry.push(this.value);
+      valueList.innerHTML = ListArry;
+    } else {
+      ListArry = ListArry.filter(e => e !== this.value);
+      valueList.innerHTML = ListArry
+    }
+  })
+}
+
